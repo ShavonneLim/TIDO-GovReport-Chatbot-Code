@@ -4,7 +4,7 @@ import time
 import os
 import uuid
 
-from flask import Flask, render_template, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, send_file
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
@@ -42,7 +42,7 @@ messages = []
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return send_file('index.html')
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
