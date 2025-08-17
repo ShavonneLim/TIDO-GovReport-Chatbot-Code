@@ -1,4 +1,6 @@
 python-telegram-bot
 flask[async]
-langchain-core
 python-dotenv
+langchain-core
+langchain-ollama
+openai-whisper
